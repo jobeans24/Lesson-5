@@ -19,3 +19,11 @@ passwordBtnEl.on('dblclick', function () {
   var newPassword = passwordGenerator(15);
   passwordDisplayEl.text(newPassword);
 });
+
+passwordBtnEl.on('click', function () {
+  var newPassword = passwordGenerator(10);
+  passwordDisplayEl.text(newPassword);
+}
+);
+
+
