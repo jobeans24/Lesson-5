@@ -13,6 +13,23 @@ var printGuestData = function (name, comment) {
   cardEl.appendTo(cardColumnEl);
 
   // TODO: add another class for `custom-card-header`
+
+var formEl = $('#guestbook-form');
+var nameInputEl = $('#name-input');
+var commentInputEl = $('#comment-input');
+var guestBookDisplayEl = $('#guest-book-display');
+
+var printGuestData = function (name, comment) {
+  var cardColumnEl = $('<div>');
+  cardColumnEl.addClass('col-12 col-sm-4 col-md-3');
+
+  var cardEl = $('<div>');
+  // TODO: add another class for `custom-card`
+  cardEl.addClass('card h-100 custom-card');
+  cardEl.appendTo(cardColumnEl);
+
+  // TODO: add another class for `custom-card-header`
+  
   var cardName = $('<h5>')
     .addClass('card-header')
     .text(name);
@@ -48,3 +65,18 @@ var handleFormSubmit = function (event) {
 };
 
 formEl.on('submit', handleFormSubmit);
+  var cardName = $('<h5>')
+    .addClass('card-header custom-card-header')
+    .text(name);
+  cardName.appendTo(cardEl);
+
+  var cardBodyEl = $('<div>');
+  cardBodyEl.addClass('card-body');
+  cardBodyEl.appendTo(cardEl);
+
+  var cardComment = $('<p>').addClass('card-text').text(comment);
+  cardComment.appendTo(cardBodyEl);
+
+  guestBookDisplayEl.append(cardColumnEl);
+}
+

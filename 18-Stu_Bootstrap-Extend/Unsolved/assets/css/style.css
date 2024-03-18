@@ -7,4 +7,64 @@
 }
 
 /* Add your custom class style definitions here */
+
 /* HINT: Apply CSS variables using `var(--brown)` syntax as your property value */
+
+.brown {
+  color: var(--brown);
+}
+
+.tan {
+  color: var(--tan);
+}
+
+.teal {
+  color: var(--teal);
+}
+
+.lightteal {
+  color: var(--lightteal);
+}
+
+.light {
+  color: var(--light);
+}
+
+/* HINT: Use the `var(--brown)` syntax to apply the custom colors to the background and border properties */
+
+.brown-bg {
+  background-color: var(--brown);
+  border-color: var(--brown);
+}
+
+.tan-bg {
+  background-color: var(--tan);
+  border-color: var(--tan);
+}
+
+.teal-bg {
+  background-color: var(--teal);
+  border-color: var(--teal);
+}
+
+.lightteal-bg {
+  background-color: var(--lightteal);
+  border-color: var(--lightteal);
+}
+
+.light-bg {
+  background-color: var(--light);
+  border-color: var(--light);
+
+  --brown: #a88f82;
+  --tan: #f5e1d5;
+  --teal: #71a8a7;
+  --lightteal: #d5f5f5;
+  --light: #fffaf7;
+}
+
+
+/* Add your custom class style definitions here */
+
+/* HINT: Apply CSS variables using `var(--brown)` syntax as your property value */
+
