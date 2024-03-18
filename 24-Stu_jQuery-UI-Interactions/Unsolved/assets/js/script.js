@@ -66,3 +66,8 @@ $(function () {
 
 // Add interaction here
 //
+// Add a sortable interaction to the skills list
+$('#skills-list').sortable();
+
+
+
