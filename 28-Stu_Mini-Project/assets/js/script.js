@@ -38,7 +38,36 @@ function printProjectData() {
   var projects = readProjectsFromStorage();
 
   // loop through each project and create a row
+  for (var i = 0; i < projects.length; i++) {
+    var project = projects[i]; // get the current project
 
+    // create a new row
+    var projectRow = $('<tr>'); 
+
+    // create a new column for the project name
+    var projectNameTd = $('<td>').text(project.name); 
+    projectRow.append(projectNameTd); 
+
+    // create a new column for the project type
+    var projectTypeTd = $('<td>').text(project.type);
+    projectRow.append(projectTypeTd);
+
+    // create a new column for the project date
+    var projectDateTd = $('<td>').text(project.date);
+    projectRow.append(projectDateTd);
+
+    // create a new column for the delete button
+    var deleteBtnTd = $('<td>');
+    var deleteBtn = $('<button>')
+    .addClass('btn btn-danger btn-delete-project')
+    .text('Delete') 
+    .attr('data-index', i); 
+    deleteBtnTd.append(deleteBtn);
+    projectRow.append(deleteBtnTd);
+
+    // append the row to the table
+    projectDisplayEl.append(projectRow);
+}
 }
 
 // Removes a project from local storage and prints the project data
